@@ -17,8 +17,9 @@ repositories {
 
 dependencies {
 	implementation ("org.springframework.boot:spring-boot-starter-data-jpa");
-	implementation("org.springframework.boot:spring-boot-starter-web")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	implementation("org.springframework.boot:spring-boot-starter-web");
+	runtimeOnly("org.postgresql:postgresql");
+	testImplementation("org.springframework.boot:spring-boot-starter-test");
 }
 
 tasks.withType<Test> {

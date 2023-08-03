@@ -8,7 +8,7 @@ public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //autoincrement
     @Column(name = "id_producto")
-    private Integer idProducto;
+    private Integer idProducto; //tipo de dato de la clave primararia Integer
 
     private String nombre;
 

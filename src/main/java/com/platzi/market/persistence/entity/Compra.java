@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity //reference to Database
 @Table(name = "compras") //real name of table
@@ -26,6 +27,8 @@ public class Compra {
     @ManyToOne
     @JoinColumn(name = "id_cliente",insertable = false, updatable = false)
     private Cliente cliente;
+    @OneToMany(mappedBy = "producto")
+    private List<ComprasProducto> productos;
 
 
     public Integer getIdCompra() {

@@ -2,6 +2,8 @@ package com.platzi.market.persistence.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 import java.io.Serializable;
 

@@ -1,9 +1,9 @@
 package com.platzi.market.persistence.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import org.hibernate.sql.ast.tree.from.MappedByTableGroup;
+
+import java.util.List;
 
 @Entity
 @Table(name = "clientes")
@@ -16,6 +16,10 @@ public class Cliente {
     private String direccion;
     @Column(name = "correo_electronico")
     private String correoElectronico;
+
+    @OneToMany(mappedBy = "cliente")
+    private List<Compra> compras;
+
 
     public String getId() {
         return id;

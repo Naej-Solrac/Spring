@@ -26,6 +26,11 @@ public class Producto {
 
     private Boolean estado;
 
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    private Categoria categoria; // esto para saber a que categoria pertenece cada producto
+
+
     public Integer getIdProducto() {
         return idProducto;
     }
